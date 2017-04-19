@@ -1,0 +1,1 @@
+# codility-solutions-javascript

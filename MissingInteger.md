@@ -33,22 +33,13 @@ Elements of input arrays can be modified.
 // console.log('this is a debug message');
 
 function solution(A) {
-    // Filter positive
-    A = A.filter(i => (i > 0))
-
-    // sort arrays
-    A.sort((a, b) => (a - b))
-
-    if (A.length == 1 && A[0] === 1) {
-        return 2
+    // write your code in JavaScript (Node.js 8.9.4)
+    const a = [...new Set(A.filter(a => a > 0).sort((a, b) => a - b))];
+   
+    for (let i = 0; i <= a.length; i++) {
+        if (a[i] !== i + 1) {
+            return i + 1;
+        }
     }
-    
-    if (A[0] !== 1) return 1
-    
-    for (var i=1; i<A.length; i++) {
-        if ((A[i] - A[i-1]) > 1) return A[i-1] + 1
-    }
-    
-    return A[A.lenth -1] + 1
 }
 ```
